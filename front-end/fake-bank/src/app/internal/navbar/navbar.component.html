@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">FakeBank</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="app/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="app/transactions">Transactions</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                        <i class="fa fa-user-circle"></i> Personal Menu
+                    </a>
+                    <div class="dropdown-menu" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link" href="" target="">
+                            <i class=""></i> item
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link" (click)="signOut()"><i class="fa fa-sign-out"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- menu pessoal do recurso  -->
+    
+</nav>

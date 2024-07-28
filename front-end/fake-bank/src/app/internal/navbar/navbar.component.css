@@ -1,0 +1,14 @@
+.nav-link{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.dropdown-menu{
+    color: grey;
+    background-color: rgb(20, 20, 20);
+    border: grey;
+}
+
+.dropdown-menu.show{
+    width: 200px;
+}
