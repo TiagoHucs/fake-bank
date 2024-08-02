@@ -1,70 +1,54 @@
-<div class="row">
-    <div class="col-sm-4">
-        <div class="card bg-danger">
-            <div class="card-body bg-danger">
-                <h4>balance</h4>
-                <h2>$ 48,70</h2>
+<div *ngIf="resource">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card bg-danger">
+                <div class="card-body bg-danger">
+                    <h4>balance</h4>
+                    <h2>$ {{resource.balance}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card bg-danger">
+                <div class="card-body bg-danger">
+                    <h4>market</h4>
+                    <h2>$ 0,00</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card bg-danger">
+                <div class="card-body bg-danger">
+                    <h4>limits</h4>
+                    <h2>$ 0,00</h2>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-4">
-        <div class="card bg-danger">
-            <div class="card-body bg-danger">
-                <h4>market</h4>
-                <h2>$ 0,00</h2>
-            </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Last Transactions</h2>
+            <p>The last transactions of the day:</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Accont</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let t of resource.transactions">
+                        <td>{{t.dateTime}}</td>
+                        <td>{{t.type}}</td>
+                        <td>{{t.value}}</td>
+                        <td>{{t.receiver}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+    
     </div>
-    <div class="col-sm-4">
-        <div class="card bg-danger">
-            <div class="card-body bg-danger">
-                <h4>limits</h4>
-                <h2>$ 0,00</h2>
-            </div>
-        </div>
-    </div>
-</div>
-<hr>
-<div class="row">
-    <div class="col-sm-12">
-        <h2>Last Transactions</h2>
-        <p>The last transactions of the day:</p>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Type</th>
-                    <th>Amount</th>
-                    <th>Accont</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>28/06/2024 12:15:23</td>
-                    <td>Credit</td>
-                    <td>$ 50,00</td>
-                    <td>bob</td>
-                </tr>
-                <tr>
-                    <td>27/06/2024 12:15:23</td>
-                    <td>Debit</td>
-                    <td>$ 30,00</td>
-                    <td>jhon</td>
-                </tr>
-                <tr>
-                    <td>26/06/2024 12:15:23</td>
-                    <td>Credit</td>
-                    <td>$ 55,00</td>
-                    <td>lisa</td>
-                </tr>
-                <tr>
-                    <td>25/06/2024 12:15:23</td>
-                    <td>Debit</td>
-                    <td>$ 26,30</td>
-                    <td>sther</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
 </div>
